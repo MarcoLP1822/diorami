@@ -1,0 +1,149 @@
+{
+  "format": 1,
+  "title": "La baita al crepuscolo",
+  "kit": "kit.glb",
+  "size": 14,
+  "character": { "model": "../../characters/robot-expressive.glb", "height": 1.2, "spawn": [-1.4, 5.1], "facing": 180 },
+  "look": "cozy",
+  "looks": {
+    "cozy": {
+      "background": ["#1a2247", "#c9785a"],
+      "fog": { "color": "#3a3f6b", "near": 24, "far": 80 },
+      "ambient": { "sky": "#7f93d9", "ground": "#3b2f45", "intensity": 1.1 },
+      "sun": { "color": "#a9bcff", "intensity": 1.6, "from": [-0.55, 0.75, 0.45] },
+      "bands": [0, 0, 0.55, 1],
+      "glow": 2.2,
+      "lights": 1,
+      "outline": { "color": "#221a2b", "width": 1.2, "depth": 0.035, "normal": 0.5 },
+      "silhouette": "#f2c27a",
+      "bloom": { "strength": 0.7, "radius": 0.6 },
+      "exposure": 1
+    },
+    "eerie": {
+      "background": ["#07090d", "#26342f"],
+      "fog": { "color": "#1b2622", "near": 9, "far": 30 },
+      "ambient": { "sky": "#4a6157", "ground": "#141414", "intensity": 0.7 },
+      "sun": { "color": "#9fc4b0", "intensity": 0.9, "from": [0.5, 0.6, -0.6] },
+      "bands": [0, 0, 0, 1],
+      "glow": 1.3,
+      "lights": 0.45,
+      "outline": { "color": "#050607", "width": 1.8, "depth": 0.03, "normal": 0.4 },
+      "silhouette": "#9fc4b0",
+      "exposure": 0.9
+    }
+  },
+  "entities": [
+    { "asset": "base", "at": [0, 0, 0] },
+    {
+      "asset": "cabin",
+      "at": [-1.5, -1.0],
+      "children": [
+        {
+          "asset": "stove", "at": [1.75, 0.34, -1.3], "turn": -24,
+          "discovery": { "title": "La stufa", "note": "Il cuore della baita.", "by": "use", "radius": 1.5, "prompt": "Accendi o spegni la stufa", "effect": "toggle" },
+          "children": [
+            { "asset": "kettle", "at": [-0.14, 0.77, 0.06], "turn": 40, "discovery": { "title": "Il bollitore", "note": "Ancora tiepido.", "by": "near", "radius": 0.9 } }
+          ]
+        },
+        { "asset": "firewood_basket", "at": [1.0, 0.34, -1.55] },
+        { "asset": "rug", "at": [0.5, 0.345, 0.15], "turn": 10 },
+        {
+          "asset": "armchair", "at": [0.75, 0.34, 0.4], "turn": 149,
+          "children": [
+            { "asset": "cat", "at": [0, 0.46, 0.04], "turn": -60, "discovery": { "title": "Il gatto", "note": "Dorme sulla poltrona buona. Sempre lui.", "by": "near", "radius": 1.0 } }
+          ]
+        },
+        {
+          "asset": "side_table", "at": [1.9, 0.34, 0.35],
+          "children": [
+            { "asset": "lamp", "at": [0, 0.53, 0], "discovery": { "title": "La lampada da lettura", "by": "use", "radius": 1.3, "prompt": "Accendi o spegni la lampada", "effect": "toggle" } },
+            { "asset": "mug", "at": [0.14, 0.53, 0.1], "turn": 30 }
+          ]
+        },
+        { "asset": "bookshelf", "at": [0.2, 0.34, -1.68], "discovery": { "title": "La libreria", "note": "Tre gialli, un atlante e un erbario.", "by": "near", "radius": 1.1 } },
+        { "asset": "bed", "at": [-1.82, 0.34, -0.78] },
+        { "asset": "painting", "at": [-0.75, 1.9, -1.835], "discovery": { "title": "Il quadro", "note": "Lo stesso laghetto, d'estate.", "by": "near", "radius": 1.1 } },
+        {
+          "asset": "table", "at": [1.45, 0.34, 1.25],
+          "children": [
+            { "asset": "candle", "at": [0.12, 0.745, 0], "discovery": { "title": "La candela", "by": "use", "radius": 1.2, "prompt": "Accendi o spegni la candela", "effect": "toggle" } },
+            { "asset": "bread_plate", "at": [-0.22, 0.745, 0.06] }
+          ]
+        },
+        { "asset": "stool", "at": [0.72, 0.34, 1.3] },
+        { "asset": "stool", "at": [1.5, 0.34, 0.62], "turn": 40 },
+        { "asset": "crate", "at": [-2.0, 0.34, 1.4], "turn": 8, "discovery": { "title": "La cassa di mele", "note": "Raccolte ieri.", "by": "near", "radius": 1.0 } },
+        { "asset": "boots", "at": [-0.02, 0.34, 1.6], "turn": -15, "discovery": { "title": "Gli stivali infangati", "note": "Qualcuno è appena rientrato.", "by": "near", "radius": 0.8 } },
+        { "asset": "plant_pot", "at": [2.12, 0.34, -0.25] },
+        { "asset": "lantern", "at": [-1.85, 2.34, 3.18], "discovery": { "title": "La lanterna del portico", "by": "use", "radius": 1.6, "prompt": "Accendi o spegni la lanterna", "effect": "toggle" } },
+        { "asset": "bench", "at": [1.3, 0.34, 2.5] },
+        { "asset": "pumpkin", "at": [0.3, 0.34, 2.95], "scale": 1.15, "discovery": { "title": "Le zucche", "note": "L'orto ha dato il meglio.", "by": "near", "radius": 1.0 } },
+        { "asset": "pumpkin", "at": [-0.1, 0.34, 3.08], "scale": 0.8, "turn": 70 }
+      ]
+    },
+    { "asset": "barrel", "at": [1.5, -2.2], "discovery": { "title": "La botte", "note": "Acqua piovana, quasi piena.", "by": "near", "radius": 1.1 } },
+    { "asset": "woodpile", "at": [-5.6, -0.7] },
+    { "asset": "mushrooms", "at": [-6.25, -1.75], "turn": 50, "discovery": { "title": "I funghi dietro la legnaia", "note": "Belli da vedere. Solo da vedere.", "by": "near", "radius": 1.0 } },
+    { "asset": "stump_axe", "at": [-5.2, 1.7], "turn": 20, "discovery": { "title": "Il ceppo", "note": "L'ascia è rimasta piantata lì.", "by": "near", "radius": 1.2 } },
+    { "asset": "lantern_post", "at": [-0.5, 4.0], "turn": 200 },
+    { "asset": "campfire", "at": [-4.2, 4.2], "off": true, "discovery": { "title": "Il fuoco da campo", "by": "use", "radius": 1.9, "prompt": "Accendi o spegni il fuoco", "effect": "toggle" } },
+    { "asset": "log_seat", "at": [-5.35, 4.5], "turn": 100 },
+    { "asset": "log_seat", "at": [-4.0, 5.45], "turn": 8 },
+    {
+      "asset": "jetty", "at": [0.7, -0.08, 3.25],
+      "children": [
+        { "asset": "bucket", "at": [2.95, 0.205, -0.22], "discovery": { "title": "Il secchio in fondo al molo", "note": "Dentro, tre pesciolini.", "by": "near", "radius": 1.0 } }
+      ]
+    },
+    { "asset": "lilypad", "at": [3.9, -0.1, 4.0] },
+    { "asset": "lilypad", "at": [4.5, -0.1, 2.6], "turn": 120 },
+    { "asset": "lilypad", "at": [2.9, -0.1, 2.3], "turn": 250, "scale": 0.8 },
+    { "asset": "reeds", "at": [5.0, 1.75] },
+    { "asset": "reeds", "at": [5.3, 4.3], "turn": 80 },
+    { "asset": "reeds", "at": [2.4, 4.95], "turn": 200 },
+    { "asset": "rock_a", "at": [5.75, 5.0], "turn": 30 },
+    { "asset": "rock_b", "at": [2.0, 5.15] },
+    { "asset": "rock_c", "at": [5.95, 2.2] },
+    { "asset": "rock_b", "at": [-6.2, 3.4], "turn": 70 },
+    { "asset": "rock_a", "at": [-6.1, -5.9], "turn": 140 },
+    { "asset": "rock_c", "at": [1.3, 2.4], "turn": 200 },
+    { "asset": "signpost", "at": [-0.2, 6.2], "turn": 15, "discovery": { "title": "Il cartello", "note": "Baita di qua, laghetto di là.", "by": "near", "radius": 1.1 } },
+    { "asset": "mailbox", "at": [1.7, 6.25], "turn": -10, "discovery": { "title": "La cassetta delle lettere", "note": "Una cartolina. È per te.", "by": "use", "radius": 1.3, "prompt": "Apri la cassetta", "effect": "wiggle" } },
+    { "asset": "fence", "at": [-5.4, 6.55] },
+    { "asset": "fence", "at": [-3.3, 6.55] },
+    { "asset": "fence", "at": [3.1, 6.55] },
+    { "asset": "fence", "at": [5.2, 6.55] },
+    { "asset": "fence", "at": [-6.55, 5.3], "turn": 90 },
+    { "asset": "pine_a", "at": [-6.0, -5.4] },
+    { "asset": "pine_a", "at": [-3.2, -5.3], "turn": 50, "scale": 0.9 },
+    { "asset": "pine_a", "at": [-0.6, -6.0], "turn": 120, "scale": 1.1 },
+    { "asset": "pine_a", "at": [2.2, -5.6], "turn": 200, "scale": 0.95 },
+    { "asset": "pine_a", "at": [4.6, -6.1], "turn": 300, "scale": 1.05 },
+    { "asset": "pine_a", "at": [6.2, -3.6], "turn": 80, "scale": 0.9 },
+    { "asset": "pine_b", "at": [-4.7, -6.3], "turn": 30 },
+    { "asset": "pine_b", "at": [-1.9, -5.0], "turn": 170 },
+    { "asset": "pine_b", "at": [0.9, -4.6], "turn": 260, "scale": 1.1 },
+    { "asset": "pine_b", "at": [3.4, -4.8], "turn": 20 },
+    { "asset": "pine_b", "at": [5.8, -5.0], "turn": 140, "scale": 1.15 },
+    { "asset": "pine_b", "at": [-6.3, -3.2], "turn": 220 },
+    { "asset": "pine_b", "at": [6.1, -1.6], "turn": 310 },
+    { "asset": "pine_b", "at": [-6.4, 0.4], "turn": 60, "scale": 0.9 },
+    { "asset": "tree_autumn_a", "at": [4.8, -0.9] },
+    { "asset": "tree_autumn_b", "at": [6.0, 0.9], "turn": 90, "scale": 0.85 },
+    { "asset": "tree_autumn_b", "at": [-6.0, 2.2], "turn": 200 },
+    { "asset": "tree_autumn_a", "at": [2.7, -3.4], "turn": 130, "scale": 0.85 },
+    { "asset": "bush", "at": [1.9, -1.7] },
+    { "asset": "bush_autumn", "at": [-3.7, 3.05], "turn": 40 },
+    { "asset": "bush", "at": [0.6, 2.95], "turn": 100 },
+    { "asset": "bush_autumn", "at": [5.6, -2.6], "turn": 200 },
+    { "asset": "bush", "at": [-6.3, -4.4], "turn": 280 },
+    { "asset": "bush", "at": [3.9, 5.9], "turn": 20 },
+    { "asset": "bush_autumn", "at": [6.3, 5.6], "turn": 150 },
+    { "asset": "pumpkin", "at": [-3.2, 3.15], "scale": 1.1 },
+    { "asset": "pumpkin", "at": [-1.2, 3.1], "scale": 0.85, "turn": 50 },
+    { "asset": "stepping_stone", "at": [-2.2, 3.45] },
+    { "asset": "stepping_stone", "at": [-2.0, 4.05], "turn": 40 },
+    { "asset": "stepping_stone", "at": [-1.75, 4.6], "turn": 80 },
+    { "asset": "mushrooms", "at": [5.9, -5.3], "turn": 200, "discovery": { "title": "Il cerchio delle fate", "note": "Nascosto dietro i pini.", "by": "near", "radius": 1.1 } }
+  ]
+}
